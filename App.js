@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import ValueCard from "./components/ValueCard";
+import ProgressCircle from "./components/ProgressCircle";
 
 // * Building a Health Application with React Native: Step Counter: https://www.youtube.com/watch?v=VVoXcr18mdo
 
@@ -13,7 +14,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-  
+
+      <ProgressCircle radius={150} progress={0.25} progressColor={"#ee0f55"} strokeWidth={25} />
+      
       <View style={styles.valuesContainer}> 
 
         <ValueCard label="Steps" value="1219"/>
@@ -39,5 +42,6 @@ const styles = StyleSheet.create({
     flexDirection: "row", 
     flexWrap: "wrap",
     gap: 55,
+    marginTop: 100,
   }
 });
