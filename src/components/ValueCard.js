@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { isEmpty } from "../utilities/sharedFunctions";
+import { isEmpty } from "../../utilities/sharedFunctions";
 
 const ValueCard = (props) => {
 
