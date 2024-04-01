@@ -4,11 +4,13 @@ import { StyleSheet, Text, View } from "react-native";
 import ValueCard from "./src/components/ValueCard";
 import ProgressCircle from "./src/components/ProgressCircle";
 import {AntDesign} from "@expo/vector-icons";
+import AppleHealthKit from "react-native-health";
 
 // * Building a Health Application with React Native: Step Counter: https://www.youtube.com/watch?v=VVoXcr18mdo
 
 
 export default function App() {
+  AppleHealthKit.initHealthKit();
 
   const [date, setDate ] = useState(new Date());
 
